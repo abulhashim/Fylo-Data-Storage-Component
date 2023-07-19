@@ -1,0 +1,204 @@
+:root {
+  --Gradient-1: hsl(6, 100%, 80%);
+  --Gradient-2: hsl(335, 100%, 65%);
+  --PaleBlue: hsl(243, 100%, 93%);
+  --GrayishBlue: hsl(229, 7%, 55%);
+  --DarkBlue: hsl(228, 56%, 26%);
+  --VeryDarkBlue: hsl(229, 57%, 11%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif;
+  background-image: url("./images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--VeryDarkBlue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 85%;
+}
+
+.container-1 {
+  border-radius: 12px 100px 12px 12px;
+  background-color: var(--DarkBlue);
+  padding: 10%;
+}
+
+.logo {
+  margin-bottom: 2rem;
+}
+
+.icons {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.btn {
+  width: 3.125rem;
+  height: 3.125rem;
+  background-color: var(--VeryDarkBlue);
+  border: none;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.storage {
+  color: var(--PaleBlue);
+  background-color: var(--DarkBlue);
+  padding: 10% 10% 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.75rem;
+  margin-top: 1.25rem;
+  position: relative;
+}
+
+.storage p span {
+  color: white;
+  font-weight: bold;
+}
+
+.storage-bar {
+  width: 90%;
+  height: fit-content;
+  background: var(--VeryDarkBlue);
+  border-radius: 8px;
+  padding: 2px;
+  margin-top: 5%;
+}
+
+.used {
+  width: 81.5%;
+  height: 15px;
+  background: linear-gradient(to right, var(--Gradient-1), var(--Gradient-2));
+  border-radius: 8px;
+  position: relative;
+}
+
+.used::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: var(--PaleBlue);
+  right: 2px;
+  top: 2px;
+}
+
+.max-min {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3%;
+  font-weight: 700;
+}
+
+.left {
+  width: 50%;
+  height: 50%;
+  background-color: #fff;
+  color: var(--VeryDarkBlue);
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 100%;
+  transform: translate(0, -50%);
+}
+
+.left p {
+  color: var(--VeryDarkBlue);
+  font-weight: 400;
+}
+
+.left p span {
+  color: var(--VeryDarkBlue);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+@media (min-width: 990px) {
+  body {
+    background-image: url("./images/bg-desktop.png");
+    background-position: bottom;
+    background-size: contain;
+  }
+
+  main {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .container-1 {
+    flex-basis: 40%;
+    min-width: 15rem;
+    padding: 2.3125rem 2.8125rem;
+    margin-right: 3%;
+  }
+
+  .btn {
+    min-width: 2.5rem;
+  }
+
+  .storage {
+    flex-basis: 60%;
+    padding: min(3em, 5%);
+    padding-bottom: min(2.25em, 5%);
+    min-width: 22.5rem;
+    align-items: flex-start;
+    border-radius: 0.75rem;
+    margin-top: 0;
+    position: relative;
+  }
+
+  .left {
+    width: fit-content;
+    height: fit-content;
+    padding: 1em 2em;
+    top: 0;
+    right: calc(min(3em, 8%));
+    transform: translate(0, -65%);
+  }
+
+  .left::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 1.25rem solid transparent;
+    border-right: 1.25rem solid #fff;
+    transform: translate(0, -50%);
+  }
+
+  .storage-bar {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .max-min {
+    width: 100%;
+    margin-top: 0.625rem;
+  }
+}
