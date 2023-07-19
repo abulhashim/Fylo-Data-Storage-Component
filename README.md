@@ -16,7 +16,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [frontendmentor.io/solutions/](https://www.frontendmentor.io/solutions/fylo-data-storage-component)
+- Solution URL: [frontendmentor.io/solutions/](https://www.frontendmentor.io/solutions/fylo-data-storage-component-vhOk6qLvU8)
 - Live Site URL: [abulhashim.github.io/Fylo-Data-Storage-Component](https://abulhashim.github.io/Fylo-Data-Storage-Component/)
 
 ## My process
@@ -33,7 +33,6 @@ Users should be able to:
 How to make a good looking message box, using:
 
     ``` css
-
     .message-box::after {
         content: "";
         position: absolute;
@@ -44,9 +43,7 @@ How to make a good looking message box, using:
         border: 1.25rem solid transparent;
         border-right: 1.25rem solid #fff;
         transform: translate(0, -50%);
-
-}
-
+    }
     ```
 
 ## Author
